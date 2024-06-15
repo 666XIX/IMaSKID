@@ -1,18 +1,12 @@
 local Kavo = {}
 
-local Frame = game.StarterGui.ScreenGui.Frame.Visible
-if Frame == true then
-	
-	script.Parent.MouseButton1Click:Connect(function()
-	Frame = false
-	end)
-	
+function keyPressed(input)
+	if input.KeyCode == Enum.KeyCode.F then
+		print(1)
+	end
 end
-if Frame == false then
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		Frame = true
-	end)
+
+game:GetService("UserInputService").InputBegan:Connect(keyPressed)
 
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
