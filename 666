@@ -1,13 +1,5 @@
 local Kavo = {}
 
-function keyPressed(input)
-	if input.KeyCode == Enum.KeyCode.F then
-		print(1)
-	end
-end
-
-game:GetService("UserInputService").InputBegan:Connect(keyPressed)
-
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 local input = game:GetService("UserInputService")
